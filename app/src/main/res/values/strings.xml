@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">Thesaurus</string>
+    <string name="app_tagline">Find definitions, synonyms, and acronyms of any English word</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

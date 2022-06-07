@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/100524/AndroidStudioProjects/Dictionary/app/src/main/res/drawable/bg_clear_button.xml" value="0.152" />
+        <entry key="..\:/Users/100524/AndroidStudioProjects/Dictionary/app/src/main/res/drawable/bg_close_button.xml" value="0.152" />
+        <entry key="..\:/Users/100524/AndroidStudioProjects/Dictionary/app/src/main/res/drawable/bg_img_button.xml" value="0.152" />
+        <entry key="..\:/Users/100524/AndroidStudioProjects/Dictionary/app/src/main/res/drawable/bg_links.xml" value="0.152" />
+        <entry key="..\:/Users/100524/AndroidStudioProjects/Dictionary/app/src/main/res/drawable/bg_primary_gradient.xml" value="0.152" />
+        <entry key="..\:/Users/100524/AndroidStudioProjects/Dictionary/app/src/main/res/drawable/bg_result_transluscent.xml" value="0.152" />
+        <entry key="..\:/Users/100524/AndroidStudioProjects/Dictionary/app/src/main/res/drawable/ic_arrow_back_24.xml" value="0.152" />
+        <entry key="..\:/Users/100524/AndroidStudioProjects/Dictionary/app/src/main/res/drawable/ic_arrow_back_30.xml" value="0.152" />
+        <entry key="..\:/Users/100524/AndroidStudioProjects/Dictionary/app/src/main/res/drawable/ic_arrow_back_grey_24.xml" value="0.152" />
+        <entry key="..\:/Users/100524/AndroidStudioProjects/Dictionary/app/src/main/res/drawable/ic_bookmarks_30.xml" value="0.152" />
+        <entry key="..\:/Users/100524/AndroidStudioProjects/Dictionary/app/src/main/res/drawable/ic_search_24.xml" value="0.152" />
+        <entry key="..\:/Users/100524/AndroidStudioProjects/Dictionary/app/src/main/res/drawable/ic_search_white_36.xml" value="0.152" />
+        <entry key="..\:/Users/100524/AndroidStudioProjects/Dictionary/app/src/main/res/drawable/sub_button_background.xml" value="0.152" />
+        <entry key="..\:/Users/100524/AndroidStudioProjects/Dictionary/app/src/main/res/font/gentium.xml" value="0.25944841675178754" />
+        <entry key="..\:/Users/100524/AndroidStudioProjects/Dictionary/app/src/main/res/layout/activity_main.xml" value="0.16847826086956522" />
+        <entry key="..\:/Users/100524/AndroidStudioProjects/Dictionary/app/src/main/res/layout/fragment_home.xml" value="0.2" />
+        <entry key="..\:/Users/100524/AndroidStudioProjects/Dictionary/app/src/main/res/layout/fragment_search.xml" value="0.24635416666666668" />
+        <entry key="..\:/Users/100524/AndroidStudioProjects/Dictionary/app/src/main/res/layout/header_search.xml" value="0.24635416666666668" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>
