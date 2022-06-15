@@ -13,6 +13,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -24,6 +25,8 @@
         app:cardCornerRadius="@dimen/half_margin"
         android:layout_marginHorizontal="@dimen/common_margin"
         android:layout_marginTop="@dimen/common_margin"
+        android:visibility="gone"
+        tools:visibility="visible"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/included">
@@ -51,6 +54,7 @@
                 app:layout_constraintTop_toTopOf="parent"/>
 
             <ImageView
+                android:id="@+id/btnPlayAudio"
                 android:layout_width="26dp"
                 android:layout_height="26dp"
                 android:src="@drawable/ic_speak_24"
@@ -79,7 +83,20 @@
 
     </com.google.android.material.card.MaterialCardView>
 
-    <com.google.android.material.button.MaterialButtonToggleGroup
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerMeanings"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        android:visibility="gone"
+        tools:visibility="visible"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cardResult"
+        android:layout_marginTop="@dimen/common_margin"
+        android:layout_marginHorizontal="@dimen/common_margin"/>
+
+    <!--<com.google.android.material.button.MaterialButtonToggleGroup
         android:id="@+id/toggle_button_group"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -111,6 +128,6 @@
             android:text="Antonym"
             tools:ignore="HardcodedText"/>
 
-    </com.google.android.material.button.MaterialButtonToggleGroup>
+    </com.google.android.material.button.MaterialButtonToggleGroup>-->
 
 </androidx.constraintlayout.widget.ConstraintLayout>

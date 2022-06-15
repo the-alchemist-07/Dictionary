@@ -98,7 +98,7 @@
                 android:layout_height="wrap_content"
                 android:visibility="invisible"
                 tools:visibility="visible"
-                app:trackColor="@color/primary_light"
+                app:trackColor="@color/white"
                 app:indicatorColor="@color/primary"
                 android:indeterminate="true"/>
 

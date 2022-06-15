@@ -30,7 +30,7 @@ class SearchViewModel @Inject constructor(
         searchRepository.searchKeyword(keyword).collect {
             when(it) {
                 is Resource.Loading -> _searchState.emit(SearchState.Loading)
-                is Resource.Success -> _searchState.emit(SearchState.Success(it.value))
+                is Resource.Success -> _searchState.emit(SearchState.SearchSuccess(it.value))
                 is Resource.Error -> _searchState.emit(SearchState.Error(it.error))
             }
         }
