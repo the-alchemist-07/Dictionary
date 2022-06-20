@@ -12,15 +12,20 @@
         <entry key="..\:/Users/100524/AndroidStudioProjects/Dictionary/app/src/main/res/drawable/ic_arrow_back_24.xml" value="0.152" />
         <entry key="..\:/Users/100524/AndroidStudioProjects/Dictionary/app/src/main/res/drawable/ic_arrow_back_30.xml" value="0.152" />
         <entry key="..\:/Users/100524/AndroidStudioProjects/Dictionary/app/src/main/res/drawable/ic_arrow_back_grey_24.xml" value="0.152" />
+        <entry key="..\:/Users/100524/AndroidStudioProjects/Dictionary/app/src/main/res/drawable/ic_arrow_bullet_16.xml" value="0.163" />
         <entry key="..\:/Users/100524/AndroidStudioProjects/Dictionary/app/src/main/res/drawable/ic_bookmarks_30.xml" value="0.152" />
+        <entry key="..\:/Users/100524/AndroidStudioProjects/Dictionary/app/src/main/res/drawable/ic_close_24.xml" value="0.163" />
         <entry key="..\:/Users/100524/AndroidStudioProjects/Dictionary/app/src/main/res/drawable/ic_search_24.xml" value="0.152" />
         <entry key="..\:/Users/100524/AndroidStudioProjects/Dictionary/app/src/main/res/drawable/ic_search_white_36.xml" value="0.152" />
         <entry key="..\:/Users/100524/AndroidStudioProjects/Dictionary/app/src/main/res/drawable/sub_button_background.xml" value="0.152" />
         <entry key="..\:/Users/100524/AndroidStudioProjects/Dictionary/app/src/main/res/font/gentium.xml" value="0.25944841675178754" />
         <entry key="..\:/Users/100524/AndroidStudioProjects/Dictionary/app/src/main/res/layout/activity_main.xml" value="0.16847826086956522" />
         <entry key="..\:/Users/100524/AndroidStudioProjects/Dictionary/app/src/main/res/layout/fragment_home.xml" value="0.2" />
-        <entry key="..\:/Users/100524/AndroidStudioProjects/Dictionary/app/src/main/res/layout/fragment_search.xml" value="0.24635416666666668" />
+        <entry key="..\:/Users/100524/AndroidStudioProjects/Dictionary/app/src/main/res/layout/fragment_search.xml" value="0.176" />
         <entry key="..\:/Users/100524/AndroidStudioProjects/Dictionary/app/src/main/res/layout/header_search.xml" value="0.24635416666666668" />
+        <entry key="..\:/Users/100524/AndroidStudioProjects/Dictionary/app/src/main/res/layout/item_meanings.xml" value="0.264" />
+        <entry key="..\:/Users/100524/AndroidStudioProjects/Dictionary/app/src/main/res/layout/item_single_list.xml" value="0.18461538461538463" />
+        <entry key="..\:/Users/100524/AppData/Local/Android/Sdk/platforms/android-32/data/res/layout/simple_list_item_1.xml" value="0.18547008547008548" />
       </map>
     </option>
   </component>

@@ -5,6 +5,8 @@
     <dimen name="half_margin">8dp</dimen>
     <dimen name="quarter_margin">4dp</dimen>
 
+    <dimen name="large_margin">56dp</dimen>
+    <dimen name="large_padding">20dp</dimen>
     <dimen name="margin_top">10dp</dimen>
     <dimen name="edittext_height">52dp</dimen>
 </resources>

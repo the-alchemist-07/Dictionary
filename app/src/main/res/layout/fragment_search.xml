@@ -4,8 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".search.presentation.SearchFragment"
-    android:background="@color/light_background">
+    android:background="@color/light_background"
+    tools:context=".search.presentation.SearchFragment">
 
     <include
         android:id="@+id/included"
@@ -21,15 +21,15 @@
         android:id="@+id/cardResult"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:cardElevation="@dimen/quarter_margin"
-        app:cardCornerRadius="@dimen/half_margin"
         android:layout_marginHorizontal="@dimen/common_margin"
         android:layout_marginTop="@dimen/common_margin"
         android:visibility="gone"
-        tools:visibility="visible"
-        app:layout_constraintStart_toStartOf="parent"
+        app:cardCornerRadius="@dimen/half_margin"
+        app:cardElevation="@dimen/quarter_margin"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/included">
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/included"
+        tools:visibility="visible">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
@@ -40,94 +40,174 @@
                 android:id="@+id/tvWord"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                tools:text="Phenomena"
-                android:textColor="@color/white"
-                android:textSize="24sp"
-                android:textStyle="bold"
-                android:fontFamily="@font/rubik_regular"
-                android:background="@drawable/bg_result_translucent"
                 android:layout_marginVertical="@dimen/common_margin"
+                android:background="@drawable/bg_result_translucent"
+                android:fontFamily="@font/rubik_regular"
                 android:paddingVertical="@dimen/common_margin"
                 android:paddingStart="@dimen/common_margin"
                 android:paddingEnd="24dp"
+                android:textColor="@color/white"
+                android:textSize="24sp"
+                android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"/>
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="Phenomena" />
 
             <ImageView
                 android:id="@+id/btnPlayAudio"
                 android:layout_width="26dp"
                 android:layout_height="26dp"
-                android:src="@drawable/ic_speak_24"
+                android:layout_marginStart="-15dp"
                 android:background="@drawable/bg_img_button"
                 android:padding="@dimen/quarter_margin"
-                android:layout_marginStart="-15dp"
-                app:layout_constraintTop_toTopOf="@id/tvWord"
+                android:src="@drawable/ic_speak_24"
                 app:layout_constraintBottom_toBottomOf="@id/tvWord"
                 app:layout_constraintStart_toEndOf="@id/tvWord"
+                app:layout_constraintTop_toTopOf="@id/tvWord"
                 tools:ignore="ContentDescription" />
 
             <TextView
                 android:id="@+id/tvPronunciation"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                tools:text="/fəˈnɒmɪnən/"
+                android:layout_marginVertical="@dimen/half_margin"
+                android:layout_marginStart="@dimen/common_margin"
                 android:textColor="@color/secondary_variant"
                 android:textSize="16sp"
-                android:layout_marginStart="@dimen/common_margin"
-                android:layout_marginVertical="@dimen/half_margin"
-                app:layout_constraintTop_toBottomOf="@id/tvWord"
+                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintBottom_toBottomOf="parent"/>
+                app:layout_constraintTop_toBottomOf="@id/tvWord"
+                tools:text="/fəˈnɒmɪnən/" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
     </com.google.android.material.card.MaterialCardView>
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyclerMeanings"
+    <!-- Meanings card -->
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cardMeanings"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        android:layout_height="0dp"
+        android:layout_margin="@dimen/common_margin"
         android:visibility="gone"
-        tools:visibility="visible"
-        app:layout_constraintStart_toStartOf="parent"
+        app:cardCornerRadius="@dimen/half_margin"
+        app:cardElevation="@dimen/quarter_margin"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/cardResult"
-        android:layout_marginTop="@dimen/common_margin"
-        android:layout_marginHorizontal="@dimen/common_margin"/>
+        tools:visibility="visible">
 
-    <!--<com.google.android.material.button.MaterialButtonToggleGroup
-        android:id="@+id/toggle_button_group"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/margin_top"
-        app:singleSelection="true"
-        android:layout_marginHorizontal="@dimen/common_margin"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/cardResult">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
 
-        <com.google.android.material.button.MaterialButton
-            style="?attr/materialButtonOutlinedStyle"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Definition"
-            tools:ignore="HardcodedText" />
+            <com.google.android.material.tabs.TabLayout
+                android:id="@+id/tabPartOfSpeeches"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:tabIndicatorAnimationMode="elastic"
+                app:tabMode="scrollable" />
 
-        <com.google.android.material.button.MaterialButton
-            style="?attr/materialButtonOutlinedStyle"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Synonym"
-            tools:ignore="HardcodedText"/>
+            <androidx.core.widget.NestedScrollView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginHorizontal="@dimen/common_margin"
+                android:layout_marginTop="@dimen/common_margin"
+                android:layout_marginBottom="@dimen/half_margin"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tabPartOfSpeeches">
 
-        <com.google.android.material.button.MaterialButton
-            style="?attr/materialButtonOutlinedStyle"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Antonym"
-            tools:ignore="HardcodedText"/>
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
 
-    </com.google.android.material.button.MaterialButtonToggleGroup>-->
+                    <TextView
+                        android:id="@+id/titleDefinition"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Definitions"
+                        android:textColor="@color/primary_variant"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/recyclerDefinitions"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/half_margin"
+                        android:layout_marginTop="@dimen/half_margin"
+                        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/titleDefinition" />
+
+                    <TextView
+                        android:id="@+id/titleSynonyms"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/common_margin"
+                        android:text="Synonyms"
+                        android:textColor="@color/primary_variant"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:visibility="gone"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/recyclerDefinitions"
+                        tools:visibility="visible" />
+
+                    <ListView
+                        android:id="@+id/listSynonyms"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/quarter_margin"
+                        android:visibility="gone"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/titleSynonyms"
+                        tools:listitem="@layout/item_single_list"
+                        tools:visibility="visible" />
+
+                    <TextView
+                        android:id="@+id/titleAntonyms"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/common_margin"
+                        android:text="Antonyms"
+                        android:textColor="@color/primary_variant"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:visibility="gone"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/listSynonyms"
+                        tools:visibility="visible" />
+
+                    <ListView
+                        android:id="@+id/listAntonyms"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/quarter_margin"
+                        android:visibility="gone"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/titleAntonyms"
+                        tools:listitem="@layout/item_single_list"
+                        tools:visibility="visible" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.core.widget.NestedScrollView>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.card.MaterialCardView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

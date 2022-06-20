@@ -10,6 +10,7 @@
 
     <color name="light_background">#F6F6F6</color>
     <color name="light_text">#8C8C8C</color>
+    <color name="dark_text">#282828</color>
     <color name="light_icons">#4F4F4F</color>
     <color name="translucent_white">#5CBBBBBB</color>
 </resources>
