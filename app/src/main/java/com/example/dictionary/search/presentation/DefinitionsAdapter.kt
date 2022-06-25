@@ -9,7 +9,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.dictionary.databinding.ItemMeaningsBinding
 import com.example.dictionary.search.domain.model.SearchResponse
 
-class DefinitionsAdapter() :
+class DefinitionsAdapter :
     ListAdapter<SearchResponse.MeaningModel.DefinitionModel, RecyclerView.ViewHolder>(DiffCallback) {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {

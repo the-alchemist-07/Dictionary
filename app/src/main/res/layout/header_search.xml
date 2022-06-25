@@ -27,7 +27,7 @@
         android:layout_marginStart="@dimen/half_margin"
         android:layout_marginEnd="@dimen/common_margin"
         app:cardCornerRadius="@dimen/quarter_margin"
-        app:cardElevation="@dimen/quarter_margin"
+        app:cardElevation="@dimen/small_elevation"
         app:layout_constraintBottom_toBottomOf="@id/btnBack"
         app:layout_constraintEnd_toStartOf="@id/btnSearch"
         app:layout_constraintStart_toEndOf="@id/btnBack"

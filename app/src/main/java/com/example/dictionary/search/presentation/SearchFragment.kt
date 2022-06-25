@@ -7,11 +7,11 @@ import android.text.Editable
 import android.text.TextWatcher
 import android.util.Log
 import android.view.View
+import android.view.View.MeasureSpec
+import android.view.ViewGroup
 import android.view.inputmethod.EditorInfo
 import android.view.inputmethod.InputMethodManager
-import android.widget.ArrayAdapter
-import android.widget.TextView
-import android.widget.Toast
+import android.widget.*
 import androidx.core.content.PackageManagerCompat.LOG_TAG
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
@@ -27,7 +27,6 @@ import com.google.android.material.tabs.TabLayout
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.launch
 import java.io.IOException
-
 
 @AndroidEntryPoint
 class SearchFragment : Fragment(R.layout.fragment_search) {
@@ -88,10 +87,6 @@ class SearchFragment : Fragment(R.layout.fragment_search) {
                 }
             })
 
-            /*included.btnSearch.setOnClickListener {
-                viewModel.checkKeyword(included.etSearch.text.toString())
-            }*/
-
             included.etSearch.setOnEditorActionListener(TextView.OnEditorActionListener { _, actionId, _ ->
                 if (actionId == EditorInfo.IME_ACTION_SEARCH) {
                     viewModel.checkKeyword(included.etSearch.text.toString())
@@ -149,6 +144,7 @@ class SearchFragment : Fragment(R.layout.fragment_search) {
                                 R.layout.item_single_list, bulletedSynonymsList
                             )
                             listSynonyms.adapter = arrayAdapter
+                            setListViewHeightBasedOnChildren(listSynonyms)
                         }
 
                         // Set antonyms
@@ -168,10 +164,10 @@ class SearchFragment : Fragment(R.layout.fragment_search) {
                                 R.layout.item_single_list, bulletedAntonymsList
                             )
                             listAntonyms.adapter = arrayAdapter
+                            setListViewHeightBasedOnChildren(listAntonyms)
                         }
                     }
                 }
-
                 override fun onTabReselected(tab: TabLayout.Tab?) {}
                 override fun onTabUnselected(tab: TabLayout.Tab?) {}
             })
@@ -258,6 +254,7 @@ class SearchFragment : Fragment(R.layout.fragment_search) {
                         synonymsList
                     )
                     listSynonyms.adapter = arrayAdapter
+                    setListViewHeightBasedOnChildren(listSynonyms)
                 }
 
                 // Set antonyms for the first tab by default
@@ -277,6 +274,7 @@ class SearchFragment : Fragment(R.layout.fragment_search) {
                         antonymsList
                     )
                     listAntonyms.adapter = arrayAdapter
+                    setListViewHeightBasedOnChildren(listAntonyms)
                 }
             }
         }
@@ -312,6 +310,23 @@ class SearchFragment : Fragment(R.layout.fragment_search) {
         } catch (e: Exception) {
             e.printStackTrace()
         }
+    }
+
+
+    private fun setListViewHeightBasedOnChildren(listView: ListView) {
+        val listAdapter: ListAdapter = listView.adapter ?: return
+        var totalHeight = 0
+        val desiredWidth = MeasureSpec.makeMeasureSpec(listView.width, MeasureSpec.AT_MOST)
+        for (i in 0 until listAdapter.count) {
+            val listItem: View = listAdapter.getView(i, null, listView)
+            listItem.measure(desiredWidth, MeasureSpec.UNSPECIFIED)
+            totalHeight += listItem.measuredHeight
+        }
+        val params: ViewGroup.LayoutParams = listView.layoutParams
+//        params.height = totalHeight + listView.dividerHeight * (listAdapter.count - 1)
+        params.height = totalHeight
+        listView.layoutParams = params
+        listView.requestLayout()
     }
 
 }

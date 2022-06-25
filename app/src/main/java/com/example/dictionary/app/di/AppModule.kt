@@ -1,4 +1,4 @@
-package com.example.dictionary.di
+package com.example.dictionary.app.di
 
 import com.example.dictionary.BuildConfig
 import com.example.dictionary.common.Constants.BASE_URL
@@ -12,7 +12,6 @@ import dagger.hilt.InstallIn
 import dagger.hilt.components.SingletonComponent
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
-import okio.Timeout
 import retrofit2.Converter
 import retrofit2.Retrofit
 import retrofit2.converter.moshi.MoshiConverterFactory
