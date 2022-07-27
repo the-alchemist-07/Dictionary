@@ -29,5 +29,4 @@ data class SearchResponse(
         val sourceUrl: String,
         val text: String
     )
-
 }
